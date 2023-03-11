@@ -39,7 +39,7 @@ final class ReparentPresenter: PresenterProtocol, NavigationPresenterProtocol {
             presenting.setViewControllers(children, animated: animated, completion: completion)
 
         } else {
-            let children = presenting.viewControllers + [child.rootViewController]
+            let children = presenting.viewControllers + [child._cachedRootViewController]
 
             presenting.setViewControllers(children, animated: animated, completion: completion)
         }
@@ -58,7 +58,7 @@ final class ReparentPresenter: PresenterProtocol, NavigationPresenterProtocol {
                 completion: completion
             )
         } else {
-            let childController = child.rootViewController
+            let childController = child._cachedRootViewController
             let filteredControllers = presenting.viewControllers.filter { vc in
                 return vc != childController
             }

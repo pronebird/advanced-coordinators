@@ -68,7 +68,7 @@ class AppCoordinator: Coordinator {
     }
 
     override func start() {
-        reassembleChildren(for: rootViewController.traitCollection) {
+        reassembleChildren(for: _cachedRootViewController.traitCollection) {
             let loginCoordinator = LoginCoordinator()
 
             loginCoordinator.onFinishFlow = { coordinator in

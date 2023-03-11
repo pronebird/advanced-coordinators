@@ -69,6 +69,22 @@ class Coordinator: NSObject {
         fatalError("Implement in subclasses.")
     }
 
+    private var __cachedRootViewController: UIViewController?
+
+    var _cachedRootViewController: UIViewController {
+        if let root = __cachedRootViewController {
+            return root
+        } else {
+            _updateCachedRootViewController()
+            return __cachedRootViewController!
+        }
+    }
+
+
+    func _updateCachedRootViewController() {
+        __cachedRootViewController = rootViewController
+    }
+
     // MARK: - Children
 
     /**
@@ -141,7 +157,7 @@ class Coordinator: NSObject {
     ) {
         print("Reassemble children for \(traitCollection.applicationLayout)")
 
-        let currentRoot = self.rootViewController
+        let currentRoot = self._cachedRootViewController
 
         willReassembleChildren()
 
@@ -149,9 +165,11 @@ class Coordinator: NSObject {
             self.updateChildren(for: traitCollection)
 
             // Support changing reparenting root view controller on top-most coordinator.
-            let newRoot = self.rootViewController
+            self._updateCachedRootViewController()
+            let newRoot = self._cachedRootViewController
 
             if let window = self.window, currentRoot != newRoot {
+                print("Reparenting root view controller.")
                 window.rootViewController = newRoot
             }
 
@@ -254,6 +272,7 @@ class Coordinator: NSObject {
         if isReassemblingChildren {
             addedChildren.append(child)
         }
+        child._updateCachedRootViewController()
     }
 
     private func didRemoveChild(_ child: Coordinator) {
@@ -274,7 +293,7 @@ class Coordinator: NSObject {
 
         let presenter = makePresenter(
             for: child,
-            traitCollection: rootViewController.traitCollection
+            traitCollection: _cachedRootViewController.traitCollection
         )
         child._presenter = presenter
         child.start()
@@ -383,7 +402,7 @@ class Coordinator: NSObject {
         for child: Coordinator,
         traitCollection: UITraitCollection
     ) -> PresenterProtocol {
-        let presenting = rootViewController
+        let presenting = _cachedRootViewController
 
         let matchingRule = presentationRules.first { rule in
             return rule.evaluate(for: child, traitCollection: traitCollection)
@@ -401,7 +420,7 @@ class Coordinator: NSObject {
         } else {
             presenter = ModalPresenter(
                 presenting: presenting,
-                presented: child.rootViewController
+                presented: child._cachedRootViewController
             )
         }
 
@@ -431,7 +450,7 @@ class Coordinator: NSObject {
         presenting: UIViewController,
         traitCollection: UITraitCollection
     ) -> PresenterProtocol {
-        let presented = child.rootViewController
+        let presented = child._cachedRootViewController
 
         let presentationDescriptor = presentationHandler.presentationDescriptor(
             for: child,
@@ -529,7 +548,7 @@ class Coordinator: NSObject {
      */
     func mount(into window: UIWindow) {
         self.window = window
-        window.rootViewController = rootViewController
+        window.rootViewController = _cachedRootViewController
         start()
     }
 
