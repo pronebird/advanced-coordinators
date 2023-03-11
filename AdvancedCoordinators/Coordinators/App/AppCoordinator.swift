@@ -7,9 +7,16 @@
 
 import UIKit
 
+enum AppState {
+    case loggedOut
+    case loggedIn
+}
+
 class AppCoordinator: Coordinator {
     let splitViewController = SplitViewController()
     let navigationController = UINavigationController()
+
+    var state: AppState = .loggedOut
 
     override var rootViewController: UIViewController {
         switch window?.traitCollection.applicationLayout ?? .horizontalNavigation {
@@ -73,6 +80,10 @@ class AppCoordinator: Coordinator {
 
             loginCoordinator.onFinishFlow = { coordinator in
                 coordinator.hide(animated: true)
+
+                self.state = .loggedIn
+
+                // TODO: show tunnel
             }
 
             self.show(loginCoordinator, animated: false)
@@ -104,7 +115,7 @@ class AppCoordinator: Coordinator {
             }
 
         case .horizontalNavigation:
-            if let child = firstChild(ofType: TunnelCoordinator.self) {
+            if let child = firstChild(ofType: TunnelCoordinator.self), state == .loggedOut {
                 removeChild(child)
             }
 
