@@ -35,13 +35,3 @@ final class SplitViewPresenter: PresenterProtocol {
     }
 }
 
-extension SplitViewColumn {
-    var svcColumn: UISplitViewController.Column {
-        switch self {
-        case .primary:
-            return .primary
-        case .secondary:
-            return .secondary
-        }
-    }
-}

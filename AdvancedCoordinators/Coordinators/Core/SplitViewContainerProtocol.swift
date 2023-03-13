@@ -18,3 +18,14 @@ extension UISplitViewController: SplitViewContainerProtocol {
 }
 
 extension SplitViewController: SplitViewContainerProtocol {}
+
+extension SplitViewColumn {
+    var svcColumn: UISplitViewController.Column {
+        switch self {
+        case .primary:
+            return .primary
+        case .secondary:
+            return .secondary
+        }
+    }
+}

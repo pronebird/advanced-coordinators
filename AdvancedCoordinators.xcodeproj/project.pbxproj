@@ -130,6 +130,7 @@
 			children = (
 				582BF70B29BF626100640FE1 /* Presentation controllers */,
 				582BF6EA29BC90F700640FE1 /* Controllers */,
+				582BF6FF29BF153900640FE1 /* Containers */,
 				582BF6AF29BC89D500640FE1 /* Coordinators */,
 				582BF6D629BC8A8700640FE1 /* Extensions */,
 				582BF69B29BC896000640FE1 /* AppDelegate.swift */,
@@ -144,7 +145,6 @@
 		582BF6AF29BC89D500640FE1 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				582BF6FF29BF153900640FE1 /* Containers */,
 				582BF6B029BC89D500640FE1 /* Core */,
 				582BF6B829BC89D500640FE1 /* App */,
 				582BF6BF29BC89D500640FE1 /* Presenters */,
@@ -158,16 +158,15 @@
 				582BF6B129BC89D500640FE1 /* AsyncForeach.swift */,
 				582BF6E829BC8E2400640FE1 /* BlockPresentationHandler.swift */,
 				582BF6B629BC89D500640FE1 /* Coordinator.swift */,
-				582BF6D929BC8ACD00640FE1 /* NavigationControllerNavigator.swift */,
+				582BF6B429BC89D500640FE1 /* PresentationHandlerProtocol.swift */,
+				582BF6B229BC89D500640FE1 /* PresenterProtocol.swift */,
+				582BF6B729BC89D500640FE1 /* PresentationControllerDismissalInterceptor.swift */,
+				582BF6B329BC89D500640FE1 /* SegueProviderProtocol.swift */,
 				582BF6B529BC89D500640FE1 /* NavigationCoordinatorProtocol.swift */,
 				582BF6DA29BC8ACD00640FE1 /* NavigatorContainerProtocol.swift */,
 				582BF6DD29BC8AEE00640FE1 /* NavigatorProtocol.swift */,
-				582BF6B729BC89D500640FE1 /* PresentationControllerDismissalInterceptor.swift */,
-				582BF6B429BC89D500640FE1 /* PresentationHandlerProtocol.swift */,
-				582BF6B229BC89D500640FE1 /* PresenterProtocol.swift */,
-				582BF6F729BF14A000640FE1 /* RootControllerNavigator.swift */,
-				582BF6B329BC89D500640FE1 /* SegueProviderProtocol.swift */,
 				582BF6E429BC8CBD00640FE1 /* SplitViewContainerProtocol.swift */,
+				582BF71229BF72E500640FE1 /* Navigators */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -245,6 +244,15 @@
 				582BF70D29BF626100640FE1 /* FormsheetPresentationController.swift */,
 			);
 			path = "Presentation controllers";
+			sourceTree = "<group>";
+		};
+		582BF71229BF72E500640FE1 /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				582BF6D929BC8ACD00640FE1 /* NavigationControllerNavigator.swift */,
+				582BF6F729BF14A000640FE1 /* RootControllerNavigator.swift */,
+			);
+			path = Navigators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
