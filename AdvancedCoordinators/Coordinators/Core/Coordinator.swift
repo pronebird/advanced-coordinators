@@ -80,7 +80,6 @@ class Coordinator: NSObject {
         }
     }
 
-
     func _updateCachedRootViewController() {
         __cachedRootViewController = rootViewController
     }
@@ -157,7 +156,7 @@ class Coordinator: NSObject {
     ) {
         print("Reassemble children for \(traitCollection.applicationLayout)")
 
-        let currentRoot = self._cachedRootViewController
+        let currentRoot = _cachedRootViewController
 
         willReassembleChildren()
 

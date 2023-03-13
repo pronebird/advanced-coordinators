@@ -8,7 +8,6 @@
 import UIKit
 
 class SelectLocationCoordinator: Coordinator {
-
     let controller = ViewController()
 
     override var rootViewController: UIViewController {
@@ -18,5 +17,4 @@ class SelectLocationCoordinator: Coordinator {
     override func start() {
         controller.title = "Select location"
     }
-
 }

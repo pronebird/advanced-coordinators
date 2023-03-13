@@ -8,7 +8,12 @@
 import UIKit
 
 final class BlockPresentationHandler: PresentationHandlerProtocol {
-    typealias Block = (_ child: Coordinator, _ presenting: UIViewController, _ presented: UIViewController, _ traitCollection: UITraitCollection) -> PresentationDescriptor
+    typealias Block = (
+        _ child: Coordinator,
+        _ presenting: UIViewController,
+        _ presented: UIViewController,
+        _ traitCollection: UITraitCollection
+    ) -> PresentationDescriptor
 
     let block: Block
 
@@ -16,8 +21,12 @@ final class BlockPresentationHandler: PresentationHandlerProtocol {
         self.block = block
     }
 
-    func presentationDescriptor(for child: Coordinator, presenting: UIViewController, presented: UIViewController, traitCollection: UITraitCollection) -> PresentationDescriptor {
-        return self.block(child, presenting, presented, traitCollection)
+    func presentationDescriptor(
+        for child: Coordinator,
+        presenting: UIViewController,
+        presented: UIViewController,
+        traitCollection: UITraitCollection
+    ) -> PresentationDescriptor {
+        return block(child, presenting, presented, traitCollection)
     }
-
 }

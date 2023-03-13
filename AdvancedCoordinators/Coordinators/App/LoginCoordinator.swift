@@ -8,7 +8,6 @@
 import UIKit
 
 class LoginCoordinator: Coordinator, NavigationCoordinatorProtocol {
-
     var onFinishFlow: ((LoginCoordinator) -> Void)?
 
     var navigator: NavigatorProtocol = NavigationControllerNavigator()
@@ -49,7 +48,6 @@ class LoginCoordinator: Coordinator, NavigationCoordinatorProtocol {
 
         navigator.pushViewController(viewController, animated: true)
     }
-
 }
 
 class LoginViewController: ViewController {}

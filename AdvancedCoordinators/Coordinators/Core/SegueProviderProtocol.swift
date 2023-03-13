@@ -22,6 +22,33 @@ protocol SegueProviderProtocol {
 }
 
 /**
+ Block based implementation of `SegueProviderProtocol`.s
+ */
+class BlockSegueProvider: SegueProviderProtocol {
+    typealias Block = (
+        _ source: Coordinator,
+        _ target: Coordinator,
+        _ context: Coordinator,
+        _ traitCollection: UITraitCollection
+    ) -> SegueDescriptor
+
+    private let block: Block
+
+    init(block: @escaping Block) {
+        self.block = block
+    }
+
+    func segueDescriptor(
+        from source: Coordinator,
+        to target: Coordinator,
+        context: Coordinator,
+        traitCollection: UITraitCollection
+    ) -> SegueDescriptor {
+        return block(source, target, context, traitCollection)
+    }
+}
+
+/**
  Protocol describing objects that implement transition between two coordinators.
  */
 protocol SegueProtocol {

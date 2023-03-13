@@ -37,6 +37,18 @@
 		582BF6F229BC9B6500640FE1 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF6F129BC9B6500640FE1 /* SplitViewController.swift */; };
 		582BF6F429BC9BD300640FE1 /* NSLayoutConstraint+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF6F329BC9BD300640FE1 /* NSLayoutConstraint+Helpers.swift */; };
 		582BF6F629BCA86500640FE1 /* TunnelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF6F529BCA86500640FE1 /* TunnelCoordinator.swift */; };
+		582BF6F829BF14A000640FE1 /* RootControllerNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF6F729BF14A000640FE1 /* RootControllerNavigator.swift */; };
+		582BF6FA29BF14A500640FE1 /* RootContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF6F929BF14A500640FE1 /* RootContainerViewController.swift */; };
+		582BF6FD29BF153700640FE1 /* HeaderBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF6FB29BF153600640FE1 /* HeaderBarButton.swift */; };
+		582BF6FE29BF153700640FE1 /* HeaderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF6FC29BF153600640FE1 /* HeaderBarView.swift */; };
+		582BF70329BF15E900640FE1 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF70129BF15E900640FE1 /* UIColor+Helpers.swift */; };
+		582BF70429BF15E900640FE1 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF70229BF15E900640FE1 /* UIColor+Palette.swift */; };
+		582BF70629BF160500640FE1 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF70529BF160500640FE1 /* SettingsCoordinator.swift */; };
+		582BF70829BF164D00640FE1 /* UIMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF70729BF164D00640FE1 /* UIMetrics.swift */; };
+		582BF70A29BF59B900640FE1 /* TermsOfServiceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF70929BF59B900640FE1 /* TermsOfServiceCoordinator.swift */; };
+		582BF70E29BF626100640FE1 /* LoginPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF70C29BF626100640FE1 /* LoginPresentationController.swift */; };
+		582BF70F29BF626100640FE1 /* FormsheetPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF70D29BF626100640FE1 /* FormsheetPresentationController.swift */; };
+		582BF71129BF682F00640FE1 /* RevokedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582BF71029BF682F00640FE1 /* RevokedCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +84,18 @@
 		582BF6F129BC9B6500640FE1 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		582BF6F329BC9BD300640FE1 /* NSLayoutConstraint+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Helpers.swift"; sourceTree = "<group>"; };
 		582BF6F529BCA86500640FE1 /* TunnelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelCoordinator.swift; sourceTree = "<group>"; };
+		582BF6F729BF14A000640FE1 /* RootControllerNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootControllerNavigator.swift; sourceTree = "<group>"; };
+		582BF6F929BF14A500640FE1 /* RootContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContainerViewController.swift; sourceTree = "<group>"; };
+		582BF6FB29BF153600640FE1 /* HeaderBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderBarButton.swift; sourceTree = "<group>"; };
+		582BF6FC29BF153600640FE1 /* HeaderBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderBarView.swift; sourceTree = "<group>"; };
+		582BF70129BF15E900640FE1 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
+		582BF70229BF15E900640FE1 /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		582BF70529BF160500640FE1 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		582BF70729BF164D00640FE1 /* UIMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIMetrics.swift; sourceTree = "<group>"; };
+		582BF70929BF59B900640FE1 /* TermsOfServiceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceCoordinator.swift; sourceTree = "<group>"; };
+		582BF70C29BF626100640FE1 /* LoginPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresentationController.swift; sourceTree = "<group>"; };
+		582BF70D29BF626100640FE1 /* FormsheetPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormsheetPresentationController.swift; sourceTree = "<group>"; };
+		582BF71029BF682F00640FE1 /* RevokedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevokedCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +128,7 @@
 		582BF69A29BC896000640FE1 /* AdvancedCoordinators */ = {
 			isa = PBXGroup;
 			children = (
+				582BF70B29BF626100640FE1 /* Presentation controllers */,
 				582BF6EA29BC90F700640FE1 /* Controllers */,
 				582BF6AF29BC89D500640FE1 /* Coordinators */,
 				582BF6D629BC8A8700640FE1 /* Extensions */,
@@ -119,6 +144,7 @@
 		582BF6AF29BC89D500640FE1 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				582BF6FF29BF153900640FE1 /* Containers */,
 				582BF6B029BC89D500640FE1 /* Core */,
 				582BF6B829BC89D500640FE1 /* App */,
 				582BF6BF29BC89D500640FE1 /* Presenters */,
@@ -130,18 +156,18 @@
 			isa = PBXGroup;
 			children = (
 				582BF6B129BC89D500640FE1 /* AsyncForeach.swift */,
-				582BF6B229BC89D500640FE1 /* PresenterProtocol.swift */,
-				582BF6B329BC89D500640FE1 /* SegueProviderProtocol.swift */,
-				582BF6B429BC89D500640FE1 /* PresentationHandlerProtocol.swift */,
 				582BF6E829BC8E2400640FE1 /* BlockPresentationHandler.swift */,
-				582BF6B529BC89D500640FE1 /* NavigationCoordinatorProtocol.swift */,
 				582BF6B629BC89D500640FE1 /* Coordinator.swift */,
-				582BF6B729BC89D500640FE1 /* PresentationControllerDismissalInterceptor.swift */,
 				582BF6D929BC8ACD00640FE1 /* NavigationControllerNavigator.swift */,
+				582BF6B529BC89D500640FE1 /* NavigationCoordinatorProtocol.swift */,
 				582BF6DA29BC8ACD00640FE1 /* NavigatorContainerProtocol.swift */,
 				582BF6DD29BC8AEE00640FE1 /* NavigatorProtocol.swift */,
+				582BF6B729BC89D500640FE1 /* PresentationControllerDismissalInterceptor.swift */,
+				582BF6B429BC89D500640FE1 /* PresentationHandlerProtocol.swift */,
+				582BF6B229BC89D500640FE1 /* PresenterProtocol.swift */,
+				582BF6F729BF14A000640FE1 /* RootControllerNavigator.swift */,
+				582BF6B329BC89D500640FE1 /* SegueProviderProtocol.swift */,
 				582BF6E429BC8CBD00640FE1 /* SplitViewContainerProtocol.swift */,
-				582BF6F129BC9B6500640FE1 /* SplitViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -154,6 +180,9 @@
 				582BF6E629BC8DA400640FE1 /* LoginCoordinator.swift */,
 				582BF6EF29BC92BD00640FE1 /* SelectLocationCoordinator.swift */,
 				582BF6F529BCA86500640FE1 /* TunnelCoordinator.swift */,
+				582BF70529BF160500640FE1 /* SettingsCoordinator.swift */,
+				582BF70929BF59B900640FE1 /* TermsOfServiceCoordinator.swift */,
+				582BF71029BF682F00640FE1 /* RevokedCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -173,6 +202,9 @@
 		582BF6D629BC8A8700640FE1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				582BF70729BF164D00640FE1 /* UIMetrics.swift */,
+				582BF70129BF15E900640FE1 /* UIColor+Helpers.swift */,
+				582BF70229BF15E900640FE1 /* UIColor+Palette.swift */,
 				582BF6D729BC8A8700640FE1 /* Sequence+CompactMapFirst.swift */,
 				582BF6F329BC9BD300640FE1 /* NSLayoutConstraint+Helpers.swift */,
 			);
@@ -185,6 +217,34 @@
 				582BF6EB29BC910C00640FE1 /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		582BF6FF29BF153900640FE1 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				582BF6F129BC9B6500640FE1 /* SplitViewController.swift */,
+				582BF70029BF155500640FE1 /* Root container */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		582BF70029BF155500640FE1 /* Root container */ = {
+			isa = PBXGroup;
+			children = (
+				582BF6F929BF14A500640FE1 /* RootContainerViewController.swift */,
+				582BF6FB29BF153600640FE1 /* HeaderBarButton.swift */,
+				582BF6FC29BF153600640FE1 /* HeaderBarView.swift */,
+			);
+			path = "Root container";
+			sourceTree = "<group>";
+		};
+		582BF70B29BF626100640FE1 /* Presentation controllers */ = {
+			isa = PBXGroup;
+			children = (
+				582BF70C29BF626100640FE1 /* LoginPresentationController.swift */,
+				582BF70D29BF626100640FE1 /* FormsheetPresentationController.swift */,
+			);
+			path = "Presentation controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,31 +320,43 @@
 				582BF6D329BC89D500640FE1 /* ReparentPresenter.swift in Sources */,
 				582BF6C829BC89D500640FE1 /* PresentationHandlerProtocol.swift in Sources */,
 				582BF6EC29BC910C00640FE1 /* ViewController.swift in Sources */,
+				582BF70E29BF626100640FE1 /* LoginPresentationController.swift in Sources */,
 				582BF6F029BC92BD00640FE1 /* SelectLocationCoordinator.swift in Sources */,
 				582BF6D829BC8A8700640FE1 /* Sequence+CompactMapFirst.swift in Sources */,
 				582BF69C29BC896000640FE1 /* AppDelegate.swift in Sources */,
 				582BF6D129BC89D500640FE1 /* PushPresenter.swift in Sources */,
+				582BF70829BF164D00640FE1 /* UIMetrics.swift in Sources */,
+				582BF70429BF15E900640FE1 /* UIColor+Palette.swift in Sources */,
+				582BF6FE29BF153700640FE1 /* HeaderBarView.swift in Sources */,
 				582BF6E729BC8DA400640FE1 /* LoginCoordinator.swift in Sources */,
 				582BF6F429BC9BD300640FE1 /* NSLayoutConstraint+Helpers.swift in Sources */,
 				582BF6E029BC8B0C00640FE1 /* AppCoordinator.swift in Sources */,
+				582BF6FA29BF14A500640FE1 /* RootContainerViewController.swift in Sources */,
+				582BF6F829BF14A000640FE1 /* RootControllerNavigator.swift in Sources */,
 				582BF6F229BC9B6500640FE1 /* SplitViewController.swift in Sources */,
+				582BF70A29BF59B900640FE1 /* TermsOfServiceCoordinator.swift in Sources */,
 				582BF6C729BC89D500640FE1 /* SegueProviderProtocol.swift in Sources */,
 				582BF6F629BCA86500640FE1 /* TunnelCoordinator.swift in Sources */,
 				582BF6DB29BC8ACD00640FE1 /* NavigationControllerNavigator.swift in Sources */,
 				582BF6C929BC89D500640FE1 /* NavigationCoordinatorProtocol.swift in Sources */,
 				582BF6CB29BC89D500640FE1 /* PresentationControllerDismissalInterceptor.swift in Sources */,
+				582BF71129BF682F00640FE1 /* RevokedCoordinator.swift in Sources */,
 				582BF69E29BC896000640FE1 /* SceneDelegate.swift in Sources */,
+				582BF6FD29BF153700640FE1 /* HeaderBarButton.swift in Sources */,
 				582BF6C529BC89D500640FE1 /* AsyncForeach.swift in Sources */,
 				582BF6E529BC8CBD00640FE1 /* SplitViewContainerProtocol.swift in Sources */,
 				582BF6D029BC89D500640FE1 /* ApplicationLayout.swift in Sources */,
+				582BF70629BF160500640FE1 /* SettingsCoordinator.swift in Sources */,
 				582BF6D229BC89D500640FE1 /* ModalPresenter.swift in Sources */,
 				582BF6D429BC89D500640FE1 /* GroupPresenter.swift in Sources */,
 				582BF6C629BC89D500640FE1 /* PresenterProtocol.swift in Sources */,
 				582BF6E929BC8E2400640FE1 /* BlockPresentationHandler.swift in Sources */,
+				582BF70329BF15E900640FE1 /* UIColor+Helpers.swift in Sources */,
 				582BF6D529BC89D500640FE1 /* SplitViewPresenter.swift in Sources */,
 				582BF6DC29BC8ACD00640FE1 /* NavigatorContainerProtocol.swift in Sources */,
 				582BF6CA29BC89D500640FE1 /* Coordinator.swift in Sources */,
 				582BF6DE29BC8AEE00640FE1 /* NavigatorProtocol.swift in Sources */,
+				582BF70F29BF626100640FE1 /* FormsheetPresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

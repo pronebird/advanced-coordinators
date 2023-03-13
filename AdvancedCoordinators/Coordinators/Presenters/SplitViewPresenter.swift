@@ -14,7 +14,11 @@ final class SplitViewPresenter: PresenterProtocol {
     let presented: UIViewController
     let column: SplitViewColumn
 
-    init(presenting: SplitViewContainerProtocol, presented: UIViewController, column: SplitViewColumn) {
+    init(
+        presenting: SplitViewContainerProtocol,
+        presented: UIViewController,
+        column: SplitViewColumn
+    ) {
         self.presenting = presenting
         self.presented = presented
         self.column = column

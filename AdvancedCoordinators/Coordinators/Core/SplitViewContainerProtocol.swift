@@ -13,7 +13,7 @@ protocol SplitViewContainerProtocol: UIViewController {
 
 extension UISplitViewController: SplitViewContainerProtocol {
     func setViewController(_ vc: UIViewController?, for side: SplitViewColumn) {
-        self.setViewController(vc, for: side.svcColumn)
+        setViewController(vc, for: side.svcColumn)
     }
 }
 

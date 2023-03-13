@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     var identifier: String?
 
     override var title: String? {
@@ -50,7 +49,7 @@ class ViewController: UIViewController {
     }
 
     private func addButton() {
-        guard isViewLoaded && button.superview == nil && buttonTitle != nil else { return }
+        guard isViewLoaded, button.superview == nil, buttonTitle != nil else { return }
 
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addAction(UIAction(handler: { [weak self] _ in
@@ -65,4 +64,3 @@ class ViewController: UIViewController {
         ])
     }
 }
-
