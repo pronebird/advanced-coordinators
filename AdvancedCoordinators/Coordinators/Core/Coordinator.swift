@@ -60,17 +60,26 @@ class Coordinator: NSObject {
     }
 
     /**
-     Root view controoller that represents the top-most view controller that this coordinator
+     Root view controller that represents the top-most view controller that this coordinator
      manages.
 
      Subclasses must override this method and return their root controller.
+
+     The result of this call is cached until the next time coordinator decides to rebuild its
+     children, therefore it's possible to return a different view controller based on traits.
      */
     var rootViewController: UIViewController {
         fatalError("Implement in subclasses.")
     }
 
+    /**
+     Cached instance of view controller returned from call to `rootViewController`.
+     */
     private var __cachedRootViewController: UIViewController?
 
+    /**
+     Returns a cached instance of view controller produced by `rootViewController`.
+     */
     var _cachedRootViewController: UIViewController {
         if let root = __cachedRootViewController {
             return root
@@ -80,7 +89,10 @@ class Coordinator: NSObject {
         }
     }
 
-    func _updateCachedRootViewController() {
+    /**
+     Updates cached root view controller from `rootViewController`.
+     */
+    private func _updateCachedRootViewController() {
         __cachedRootViewController = rootViewController
     }
 
