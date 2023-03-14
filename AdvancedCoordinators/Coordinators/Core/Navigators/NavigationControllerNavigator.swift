@@ -37,29 +37,21 @@ class NavigationControllerNavigator: NavigatorProtocol {
 
     func pushViewController(_ vc: UIViewController, animated: Bool, completion: (() -> Void)?) {
         navigationController.pushViewController(vc, animated: animated)
-
-        pumpEventsIfNeeded(animated: animated)
         notifyCompletion(completion)
     }
 
     func popViewController(animated: Bool, completion: (() -> Void)?) {
         navigationController.popViewController(animated: animated)
-
-        pumpEventsIfNeeded(animated: animated)
         notifyCompletion(completion)
     }
 
     func popToViewController(_ vc: UIViewController, animated: Bool, completion: (() -> Void)?) {
         navigationController.popToViewController(vc, animated: animated)
-
-        pumpEventsIfNeeded(animated: animated)
         notifyCompletion(completion)
     }
 
     func popToRootViewController(animated: Bool, completion: (() -> Void)?) {
         navigationController.popToRootViewController(animated: animated)
-
-        pumpEventsIfNeeded(animated: animated)
         notifyCompletion(completion)
     }
 
