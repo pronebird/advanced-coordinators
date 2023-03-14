@@ -107,6 +107,8 @@ class RootContainerViewController: UIViewController {
         margins.right = UIMetrics.contentLayoutMargins.right
         view.layoutMargins = margins
 
+        definesPresentationContext = true
+
         addTransitionView()
         addHeaderBarView()
         updateHeaderBarBackground()
