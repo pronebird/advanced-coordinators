@@ -18,7 +18,7 @@ class RevokedCoordinator: Coordinator {
 
     override func start() {
         controller.title = "Revoked device"
-        controller.buttonTitle = "Log out"
+        controller.buttonTitle = "Disconnect VPN and log out"
         controller.buttonAction = { [weak self] in
             guard let self = self else { return }
 
