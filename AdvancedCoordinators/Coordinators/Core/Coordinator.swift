@@ -587,7 +587,10 @@ class Coordinator: NSObject {
      */
     func mount(into window: UIWindow) {
         self.window = window
+
         window.rootViewController = _cachedRootViewController
+        window.makeKeyAndVisible()
+
         start()
     }
 
