@@ -346,7 +346,7 @@ class Coordinator: NSObject {
             return
         }
 
-        let traitCollection = rootViewController.traitCollection
+        let traitCollection = _cachedRootViewController.traitCollection
 
         let segueRule = segueRules.first { rule in
             return rule.evaluate(from: source, to: destination, traitCollection: traitCollection)
@@ -370,7 +370,7 @@ class Coordinator: NSObject {
 
         let destinationPresenter = makePresenter(
             for: destination,
-            traitCollection: rootViewController.traitCollection
+            traitCollection: _cachedRootViewController.traitCollection
         )
         destination._presenter = destinationPresenter
 
