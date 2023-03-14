@@ -178,8 +178,6 @@ class AppCoordinator: Coordinator, RootContainerViewControllerDelegate {
     }
 
     override func start() {
-        let traitCollection = window?.traitCollection ?? UITraitCollection()
-
         reassembleChildren(for: traitCollection) {
             self.continueFlow()
         }
@@ -196,8 +194,6 @@ class AppCoordinator: Coordinator, RootContainerViewControllerDelegate {
             performSegue(from: coordinator, to: makeLoginCoordinator(), animated: animated)
 
         case .loggedIn:
-            let traitCollection = window?.traitCollection ?? UITraitCollection()
-
             switch traitCollection.applicationLayout {
             case .horizontalNavigation:
                 performSegue(from: coordinator, to: makeTunnelCoordinator(), animated: animated)
@@ -332,8 +328,6 @@ class AppCoordinator: Coordinator, RootContainerViewControllerDelegate {
     private func didLogin(from loginCoordinator: LoginCoordinator) {
         appState.deviceState = .loggedIn
 
-        let traitCollection = window?.traitCollection ?? UITraitCollection()
-
         switch traitCollection.applicationLayout {
         case .horizontalNavigation:
             performSegue(from: loginCoordinator, to: makeTunnelCoordinator(), animated: true)
@@ -366,7 +360,7 @@ class AppCoordinator: Coordinator, RootContainerViewControllerDelegate {
     func rootContainerViewSupportedInterfaceOrientations(_ controller: RootContainerViewController)
         -> UIInterfaceOrientationMask
     {
-        switch controller.traitCollection.userInterfaceIdiom {
+        switch traitCollection.userInterfaceIdiom {
         case .phone:
             return .portrait
         default:

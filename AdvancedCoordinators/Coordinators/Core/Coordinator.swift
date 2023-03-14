@@ -173,6 +173,9 @@ class Coordinator: NSObject {
         willReassembleChildren()
 
         disassembleChildren {
+            // Store new trait collection.
+            self._traitCollection = traitCollection
+
             self.updateChildren(for: traitCollection)
 
             // Support changing reparenting root view controller on top-most coordinator.
@@ -304,7 +307,7 @@ class Coordinator: NSObject {
 
         let presenter = makePresenter(
             for: child,
-            traitCollection: _cachedRootViewController.traitCollection
+            traitCollection: traitCollection
         )
         child._presenter = presenter
         child.start()
@@ -346,7 +349,7 @@ class Coordinator: NSObject {
             return
         }
 
-        let traitCollection = _cachedRootViewController.traitCollection
+        let traitCollection = traitCollection
 
         let segueRule = segueRules.first { rule in
             return rule.evaluate(from: source, to: destination, traitCollection: traitCollection)
@@ -370,7 +373,7 @@ class Coordinator: NSObject {
 
         let destinationPresenter = makePresenter(
             for: destination,
-            traitCollection: _cachedRootViewController.traitCollection
+            traitCollection: traitCollection
         )
         destination._presenter = destinationPresenter
 
@@ -550,7 +553,32 @@ class Coordinator: NSObject {
     /**
      Returns `UIWindow` object this coordinator is attached to.
      */
-    private(set) var window: UIWindow?
+    private(set) var window: UIWindow? {
+        didSet {
+            _traitCollection = window?.traitCollection
+        }
+    }
+
+    /**
+     Returns `traitCollection` captured at the time of last UI composition.
+     */
+    var traitCollection: UITraitCollection {
+        if let traitCollection = _traitCollection {
+            return traitCollection
+        }
+
+        if let traitCollection = parent?.traitCollection {
+            return traitCollection
+        }
+
+        return window?.traitCollection ?? UITraitCollection()
+    }
+
+    /**
+     Cached trait collection that's usually assigned when updpating children or assigning a window
+     to coordinator.
+     */
+    private var _traitCollection: UITraitCollection?
 
     /**
      Assigns root view controller on window and start coordinator.
