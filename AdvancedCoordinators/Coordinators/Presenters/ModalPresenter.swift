@@ -62,6 +62,8 @@ final class ModalPresenter: PresenterProtocol {
 
         while let next = current.presentedViewController {
             assert(next != current)
+            assert(!next.isBeingDismissed)
+
             current = next
         }
 
